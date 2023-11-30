@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./views/Home/Home";
 import NotFound from "./views/NotFound/NotFound";
@@ -8,7 +7,13 @@ import Education from "./views/Education/Education";
 import Footer from "./components/Footer";
 import "./App.css";
 
+import { JobsContext } from "./services/JobsContext";
+import { DegreesContext } from "./services/DegreesContext";
+import { useContext } from "react";
+
 function App() {
+  let jobsContext = useContext(JobsContext);
+
   return (
     <Router>
       <div>
@@ -17,7 +22,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/education" element={<Education />} />
-            <Route path="/work-experience" element={<WorkExperience />} />
+            <Route
+              path="/work-experience"
+              element={
+                <WorkExperience
+                  viewModel={jobsContext.viewModel}
+                  api={jobsContext.api}
+                />
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
