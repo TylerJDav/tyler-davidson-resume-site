@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import JobsTable from "./JobsTable";
 
-function TeamListView({ viewModel, api }) {
+function JobsListView({ viewModel, api }) {
   const [data, updateData] = useState(null);
   const [filterStr, setFilterStr] = useState(api.filterStr);
   const [sortCol, setSortCol] = useState(api.sortCol);
@@ -21,7 +21,7 @@ function TeamListView({ viewModel, api }) {
   return (
     data && (
       <div className="col-sm-8">
-        <div className="shadow-lg rounded-3 p-3 bg-black bg-opacity-75 bg-gradient">
+        <div className="shadow-lg rounded-3 p-3 bg-opacity-75 bg-gradient">
           <main>
             <div className="row">
               <div className="col-12">
@@ -40,4 +40,4 @@ function TeamListView({ viewModel, api }) {
   );
 }
 
-export default TeamListView;
+export default JobsListView;

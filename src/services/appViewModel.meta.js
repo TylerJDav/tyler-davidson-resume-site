@@ -22,8 +22,8 @@ let appViewModel = {
 
       list: {
         listTitle: "Employment History",
-        tableClasses: "table table-dark table-hover mt-2",
-        thClasses: "bg-black bg-gradient",
+        tableClasses: "table bg-blue-900 mt-2",
+        thClasses: "bg-gray-800 bg-gradient",
         columns: [
           {
             label: "Title",
@@ -57,7 +57,7 @@ let appViewModel = {
           title: "Instructional Assistant",
           employer: "Utah Valley University",
           startDate: "August 2023",
-          endDate: "Present",
+          endDate: "December 2023",
           achievements:
             "Trusted to adhere to FERPA guidelines and given special permission to grade a final exam in the absence of the professor",
           responsibilities:
@@ -84,6 +84,17 @@ let appViewModel = {
             "Regularly consulted on means to improve efficiency and restructuring of assignments with changes in leadership",
           responsibilities:
             "Clean in and around faculty offices, office buildings while upholding PPE and chemical safety protocols",
+        },
+        {
+          id: 4,
+          title: "Data Annotation Specialist",
+          employer: "Tesla",
+          startDate: "January 2024",
+          endDate: "Present",
+          achievements:
+            "Ceritified to work on the Autopilot team, the most advanced self-driving technology in the world",
+          responsibilities:
+            "Label and annotate data for machine learning models to improve Tesla's self-driving technology",
         },
       ],
     },
